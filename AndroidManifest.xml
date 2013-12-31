@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (C) 2011 Scripture Software (http://scripturesoftware.org/)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.BibleQuote"
+	android:versionName="0.07.12"
+	android:versionCode="60"
+	android:installLocation="auto">
+
+	<uses-sdk android:targetSdkVersion="15" android:minSdkVersion="7"/>
+
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<!--
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	-->
+
+	<supports-screens
+		android:smallScreens="true"
+		android:normalScreens="true"
+		android:largeScreens="true"
+		android:xlargeScreens="true"
+		android:anyDensity="true"/>
+
+	<application
+		android:label="@string/app_name"
+		android:icon="@drawable/icon"
+		android:theme="@style/Theme.BibleQuote"
+		android:name=".BibleQuoteApp">
+
+		<activity android:label="@string/app_name"
+			android:name=".ui.SplashActivity"
+			android:theme="@style/Theme.Sherlock.Light.NoActionBar">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".ui.LibraryActivity" android:label="@string/library"/>
+		<activity android:name=".ui.BookmarksActivity" android:label="@string/bookmarks"/>
+		<activity android:name=".ui.HistoryActivity" android:label="@string/history"/>
+		<activity android:name=".ui.SearchActivity" android:label="@string/search"/>
+		<activity android:name=".ui.SettingsActivity" android:label="@string/settings"/>
+		<activity android:name=".ui.AboutActivity" android:label="@string/about"/>
+		<activity android:name=".ui.HelpActivity" android:label="@string/help"/>
+		<activity android:name=".ui.ReaderActivity" android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask"/>
+		<activity android:name=".ui.ServiceActivity" android:label="@string/service" android:launchMode="singleTask"/>
+
+		<activity android:name=".ui.CrossReferenceActivity" android:label="@string/cross_reference">
+			<intent-filter>
+				<action android:name="com.BibleQuote.intent.action.VIEW_REFERENCE"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+		</activity>
+
+		<service
+				android:name="com.BibleQuote.BibleQuoteService"
+				android:icon="@drawable/icon"
+				android:enabled="true"
+				android:exported="false" />
+
+	</application>
+
+</manifest> 

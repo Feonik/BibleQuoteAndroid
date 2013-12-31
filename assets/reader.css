@@ -1,0 +1,156 @@
+.verse_editor {
+	overflow: auto; /* полосы прокрутки не появляются, перемещение только через клавиатуру */
+	width: 100%;
+	/*height: auto; -- на весь стих не растягивает*/
+	border: solid 1px black;
+}
+
+
+@font-face {
+	font-family: 'NotoSerif';
+	src: url('file:///mnt/sdcard/BibleQuote/Fonts/NotoSerif-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'NotoSerif';
+	src: url('file:///mnt/sdcard/BibleQuote/Fonts/NotoSerif-Italic.ttf');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'NotoSerif';
+	src: url('file:///mnt/sdcard/BibleQuote/Fonts/NotoSerif-Bold.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'NotoSerif';
+	src: url('file:///mnt/sdcard/BibleQuote/Fonts/NotoSerif-BoldItalic.ttf');
+	font-weight: bold;
+	font-style: italic;
+}
+
+
+@font-face {
+	font-family: 'LiberationSerif';
+	src: url('file:///mnt/sdcard/BibleQuote/Fonts/LiberationSerif-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LiberationSerif';
+	src: url('file:///mnt/sdcard/BibleQuote/Fonts/LiberationSerif-Italic.ttf');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'LiberationSerif';
+	src: url('file:///mnt/sdcard/BibleQuote/Fonts/LiberationSerif-Bold.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LiberationSerif';
+	src: url('file:///mnt/sdcard/BibleQuote/Fonts/LiberationSerif-BoldItalic.ttf');
+	font-weight: bold;
+	font-style: italic;
+}
+
+
+@font-face {
+	font-family: 'Tinos';
+	src: url('file:///mnt/sdcard/BibleQuote/Fonts/Tinos-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Tinos';
+	src: url('file:///mnt/sdcard/BibleQuote/Fonts/Tinos-Italic.ttf');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Tinos';
+	src: url('file:///mnt/sdcard/BibleQuote/Fonts/Tinos-Bold.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Tinos';
+	src: url('file:///mnt/sdcard/BibleQuote/Fonts/Tinos-BoldItalic.ttf');
+	font-weight: bold;
+	font-style: italic;
+}
+
+
+@font-face {
+	font-family: 'LiberationSans';
+	src: url('file:///mnt/sdcard/BibleQuote/Fonts/LiberationSans-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LiberationSans';
+	src: url('file:///mnt/sdcard/BibleQuote/Fonts/LiberationSans-Italic.ttf');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'LiberationSans';
+	src: url('file:///mnt/sdcard/BibleQuote/Fonts/LiberationSans-Bold.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'LiberationSans';
+	src: url('file:///mnt/sdcard/BibleQuote/Fonts/LiberationSans-BoldItalic.ttf');
+	font-weight: bold;
+	font-style: italic;
+}
+
+
+@font-face {
+	font-family: 'Ubuntu';
+	src: url('file:///mnt/sdcard/BibleQuote/Fonts/Ubuntu-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Ubuntu';
+	src: url('file:///mnt/sdcard/BibleQuote/Fonts/Ubuntu-Italic.ttf');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Ubuntu';
+	src: url('file:///mnt/sdcard/BibleQuote/Fonts/Ubuntu-Bold.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Ubuntu';
+	src: url('file:///mnt/sdcard/BibleQuote/Fonts/Ubuntu-BoldItalic.ttf');
+	font-weight: bold;
+	font-style: italic;
+}
+
+
+body {
+	font-family: 'NotoSerif';
+}
