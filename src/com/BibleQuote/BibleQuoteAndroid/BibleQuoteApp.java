@@ -23,7 +23,7 @@ import com.BibleQuote.BibleQuoteAndroid.ui.BibleQuoteService;
 import com.BibleQuote.bqtj.CoreContext;
 import com.BibleQuote.bqtj.android.CoreContextAndroid;
 import com.BibleQuote.bqtj.managers.bookmarks.repository.IBookmarksRepository;
-import com.BibleQuote.bqtj.managers.bookmarks.repository.dbBookmarksRepository;
+//import com.BibleQuote.bqtj.managers.bookmarks.repository.dbBookmarksRepository;
 
 
 public class BibleQuoteApp extends Application {
