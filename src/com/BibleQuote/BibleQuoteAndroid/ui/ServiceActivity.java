@@ -24,6 +24,7 @@ public class ServiceActivity extends SherlockFragmentActivity {
 
 	private String toModuleID = "";
 
+	// TODO to R.string
 	public final static String BROADCAST_ACTION = "com.BibleQuote.bqtj.ui.ServiceActivity";
 
 	public final static String STATUS_MSG = "StatusMsg";

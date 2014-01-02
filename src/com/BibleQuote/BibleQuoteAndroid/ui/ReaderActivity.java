@@ -69,6 +69,7 @@ public class ReaderActivity extends SherlockFragmentActivity implements OnTaskCo
 	private static final int VIEW_CHAPTER_NAV_LENGHT = 3000;
 	private ReaderWebView.Mode oldMode;
 
+	// TODO to R.string
 	private static final String VIEW_REFERENCE = "com.BibleQuote.intent.action.VIEW_REFERENCE";
 
 	public Librarian getLibrarian() {
