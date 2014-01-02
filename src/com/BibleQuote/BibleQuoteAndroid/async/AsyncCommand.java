@@ -36,7 +36,7 @@ public class AsyncCommand extends Task {
 	protected Boolean doInBackground(String... arg0) {
 		isSuccess = false;
 		try {
-//			command.execute();
+			command.execute();
 			isSuccess = true;
 		} catch (Exception e) {
 			exception = e;
