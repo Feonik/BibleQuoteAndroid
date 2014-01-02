@@ -38,8 +38,7 @@ public class AsyncOpenModule extends Task {
 
 			isSuccess = true;
 		} catch (OpenModuleException e) {
-			//Lod.e(TAG, String.format("AsyncOpenBooks(): ", e.toString()),
-			// e);
+			//Lod.e(TAG, String.format("AsyncOpenBooks(): ", e.toString()), e);
 			exception = e;
 		} catch (BooksDefinitionException e) {
 			exception = e;

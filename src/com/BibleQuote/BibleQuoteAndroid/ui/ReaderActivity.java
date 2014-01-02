@@ -132,12 +132,15 @@ public class ReaderActivity extends SherlockFragmentActivity implements OnTaskCo
 					break;
 
 				case R.id.action_share:
-//					myLibrarian.shareText(ReaderActivity.this, selVerses, Destination.ActionSend);
+//+					myLibrarian.shareText(ReaderActivity.this, selVerses,
+// Destination.ActionSend);
 					break;
 
 				case R.id.action_copy:
-//					myLibrarian.shareText(ReaderActivity.this, selVerses, Destination.Clipboard);
-//					Toast.makeText(ReaderActivity.this, getString(R.string.added), Toast.LENGTH_LONG).show();
+//+					myLibrarian.shareText(ReaderActivity.this, selVerses,
+// Destination.Clipboard);
+//+					Toast.makeText(ReaderActivity.this, getString(R.string
+// .added), Toast.LENGTH_LONG).show();
 					break;
 
 				case R.id.action_references:

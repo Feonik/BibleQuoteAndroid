@@ -15,8 +15,10 @@ public class HelpActivity extends SherlockFragmentActivity {
 		setContentView(R.layout.help);
 		ViewUtils.setActionBarBackground(this);
 
-//		String helpText = FsUtils.getAssetString(getApplicationContext(), "help.html");
+//+		String helpText = FsUtils.getAssetString(getApplicationContext(),
+// "help.html");
 		WebView vWeb = (WebView) findViewById(R.id.helpView);
-//		vWeb.loadDataWithBaseURL("file:///url_initial_load", helpText, "text/html", "UTF-8", "about:config");
+//+		vWeb.loadDataWithBaseURL("file:///url_initial_load", helpText,
+// "text/html", "UTF-8", "about:config");
 	}
 }

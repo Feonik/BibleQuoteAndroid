@@ -93,8 +93,9 @@ public class CrossReferenceActivity extends SherlockFragmentActivity implements 
 		mAsyncManager = app.getAsyncManager();
 		mAsyncManager.handleRetainedTask(mTask, this);
 		if (mTask == null) {
-//			mTask = new AsyncCommand(new GetParallesLinks(), progressMessage, false);
-//			mAsyncManager.setupTask(mTask, this);
+//+			mTask = new AsyncCommand(new GetParallesLinks(), progressMessage,
+// false);
+//+			mAsyncManager.setupTask(mTask, this);
 		}
 	}
 
@@ -139,7 +140,7 @@ public class CrossReferenceActivity extends SherlockFragmentActivity implements 
 		LV.setAdapter(adapter);
 	}
 
-//	class GetParallesLinks implements ICommand {
+//+	class GetParallesLinks implements ICommand {
 //		@Override
 //		public void execute() throws Exception {
 //			crossReference = myLibrarian.getCrossReference(bReference);
