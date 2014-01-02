@@ -25,7 +25,7 @@ import android.widget.TextView;
 import com.BibleQuote.BibleQuoteAndroid.ui.adapters.TabsAdapter;
 import com.BibleQuote.BibleQuoteAndroid.ui.fragments.BookmarksFragment;
 import com.BibleQuote.BibleQuoteAndroid.ui.fragments.TagsFragment;
-import com.BibleQuote.R;
+import com.BibleQuote.BibleQuoteAndroid.R;
 import com.BibleQuote.bqtj.managers.bookmarks.Bookmark;
 import com.BibleQuote.BibleQuoteAndroid.utils.ViewUtils;
 import com.actionbarsherlock.app.SherlockFragmentActivity;

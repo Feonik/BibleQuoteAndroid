@@ -2,7 +2,7 @@ package com.BibleQuote.BibleQuoteAndroid.exceptions;
 
 import android.content.Context;
 import com.BibleQuote.bqtj.utils.Log;
-import com.BibleQuote.R;
+import com.BibleQuote.BibleQuoteAndroid.R;
 import com.BibleQuote.bqtj.exceptions.BookDefinitionException;
 import com.BibleQuote.bqtj.exceptions.BookNotFoundException;
 import com.BibleQuote.bqtj.exceptions.BooksDefinitionException;

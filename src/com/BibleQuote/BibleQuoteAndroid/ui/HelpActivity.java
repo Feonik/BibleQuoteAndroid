@@ -2,7 +2,7 @@ package com.BibleQuote.BibleQuoteAndroid.ui;
 
 import android.os.Bundle;
 import android.webkit.WebView;
-import com.BibleQuote.R;
+import com.BibleQuote.BibleQuoteAndroid.R;
 import com.BibleQuote.bqtj.utils.FsUtils;
 import com.BibleQuote.BibleQuoteAndroid.utils.ViewUtils;
 import com.actionbarsherlock.app.SherlockFragmentActivity;

@@ -21,7 +21,7 @@ import android.content.res.Resources.NotFoundException;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceChangeListener;
-import com.BibleQuote.R;
+import com.BibleQuote.BibleQuoteAndroid.R;
 import com.BibleQuote.bqtj.utils.PreferenceHelper;
 import com.actionbarsherlock.app.SherlockPreferenceActivity;
 

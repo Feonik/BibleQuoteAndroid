@@ -25,7 +25,7 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.webkit.*;
-import com.BibleQuote.R;
+import com.BibleQuote.BibleQuoteAndroid.R;
 import com.BibleQuote.bqtj.listeners.IReaderViewListener;
 import com.BibleQuote.bqtj.listeners.IReaderViewListener.ChangeCode;
 import com.BibleQuote.bqtj.managers.Librarian;

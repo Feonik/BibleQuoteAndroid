@@ -22,7 +22,7 @@ import android.graphics.PixelFormat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
-import com.BibleQuote.R;
+import com.BibleQuote.BibleQuoteAndroid.R;
 
 public class ColorPickerDialog extends Dialog
 		implements ColorPickerView.OnColorChangedListener, View.OnClickListener {

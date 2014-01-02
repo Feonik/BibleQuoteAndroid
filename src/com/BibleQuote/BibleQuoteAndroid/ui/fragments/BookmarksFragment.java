@@ -27,7 +27,7 @@ import android.widget.Toast;
 import com.BibleQuote.BibleQuoteAndroid.ui.widget.listview.ItemAdapter;
 import com.BibleQuote.BibleQuoteAndroid.ui.widget.listview.item.BookmarkItem;
 import com.BibleQuote.BibleQuoteAndroid.ui.widget.listview.item.Item;
-import com.BibleQuote.R;
+import com.BibleQuote.BibleQuoteAndroid.R;
 import com.BibleQuote.BibleQuoteAndroid.BibleQuoteApp;
 import com.BibleQuote.bqtj.entity.BibleReference;
 import com.BibleQuote.bqtj.managers.Librarian;

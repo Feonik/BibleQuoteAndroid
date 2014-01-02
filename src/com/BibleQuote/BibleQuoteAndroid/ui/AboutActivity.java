@@ -17,7 +17,7 @@ package com.BibleQuote.BibleQuoteAndroid.ui;
 
 import android.os.Bundle;
 import android.widget.TextView;
-import com.BibleQuote.R;
+import com.BibleQuote.BibleQuoteAndroid.R;
 import com.BibleQuote.BibleQuoteAndroid.utils.ViewUtils;
 import com.BibleQuote.bqtj.CoreContext;
 import com.actionbarsherlock.app.SherlockFragmentActivity;

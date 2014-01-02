@@ -5,8 +5,9 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.view.View;
 import android.widget.TextView;
-import com.BibleQuote.R;
+import com.BibleQuote.BibleQuoteAndroid.R;
 import com.BibleQuote.BibleQuoteAndroid.BibleQuoteApp;
+import com.BibleQuote.BibleQuoteAndroid.services.BibleQuoteService;
 import com.BibleQuote.BibleQuoteAndroid.utils.ViewUtils;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 

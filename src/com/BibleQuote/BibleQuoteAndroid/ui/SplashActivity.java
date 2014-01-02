@@ -22,7 +22,7 @@ import com.BibleQuote.BibleQuoteAndroid.async.AsyncCommand;
 import com.BibleQuote.BibleQuoteAndroid.async.AsyncManager;
 import com.BibleQuote.BibleQuoteAndroid.async.command.InitApplication;
 import com.BibleQuote.BibleQuoteAndroid.utils.Task;
-import com.BibleQuote.R;
+import com.BibleQuote.BibleQuoteAndroid.R;
 import com.BibleQuote.BibleQuoteAndroid.BibleQuoteApp;
 import com.BibleQuote.bqtj.android.CoreContextAndroid;
 import com.BibleQuote.bqtj.android.utils.LogSysAndroid;

@@ -23,7 +23,7 @@ import android.view.View;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
-import com.BibleQuote.R;
+import com.BibleQuote.BibleQuoteAndroid.R;
 
 public final class NumberChoiseView extends DialogPreference implements
 		OnSeekBarChangeListener {

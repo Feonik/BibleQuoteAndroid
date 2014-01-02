@@ -36,7 +36,7 @@ import android.widget.Toast;
 import com.BibleQuote.BibleQuoteAndroid.ui.fragments.TTSPlayerFragment;
 import com.BibleQuote.BibleQuoteAndroid.ui.widget.ReaderWebView;
 import com.BibleQuote.BibleQuoteAndroid.utils.ViewUtils;
-import com.BibleQuote.R;
+import com.BibleQuote.BibleQuoteAndroid.R;
 import com.BibleQuote.BibleQuoteAndroid.BibleQuoteApp;
 import com.BibleQuote.BibleQuoteAndroid.async.AsyncManager;
 import com.BibleQuote.BibleQuoteAndroid.async.AsyncOpenChapter;

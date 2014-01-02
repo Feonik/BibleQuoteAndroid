@@ -25,7 +25,7 @@ import com.BibleQuote.BibleQuoteAndroid.ui.widget.listview.ItemAdapter;
 import com.BibleQuote.BibleQuoteAndroid.ui.widget.listview.item.Item;
 import com.BibleQuote.BibleQuoteAndroid.ui.widget.listview.item.SubtextItem;
 import com.BibleQuote.BibleQuoteAndroid.ui.widget.listview.item.TextItem;
-import com.BibleQuote.R;
+import com.BibleQuote.BibleQuoteAndroid.R;
 import com.BibleQuote.BibleQuoteAndroid.BibleQuoteApp;
 import com.BibleQuote.BibleQuoteAndroid.async.AsyncCommand;
 import com.BibleQuote.BibleQuoteAndroid.async.AsyncCommand.ICommand;

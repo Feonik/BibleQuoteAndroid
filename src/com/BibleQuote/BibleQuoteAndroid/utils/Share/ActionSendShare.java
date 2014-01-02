@@ -2,7 +2,7 @@ package com.BibleQuote.BibleQuoteAndroid.utils.Share;
 
 import android.content.Context;
 import android.content.Intent;
-import com.BibleQuote.R;
+import com.BibleQuote.BibleQuoteAndroid.R;
 import com.BibleQuote.bqtj.modules.Book;
 import com.BibleQuote.bqtj.modules.Chapter;
 import com.BibleQuote.bqtj.modules.Module;

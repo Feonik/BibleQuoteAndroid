@@ -1,4 +1,4 @@
-package com.BibleQuote.BibleQuoteAndroid.ui;
+package com.BibleQuote.BibleQuoteAndroid.services;
 
 import android.app.Notification;
 import android.app.PendingIntent;
@@ -6,7 +6,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
-import com.BibleQuote.R;
+import com.BibleQuote.BibleQuoteAndroid.R;
 import com.BibleQuote.BibleQuoteAndroid.BibleQuoteApp;
 import com.BibleQuote.bqtj.exceptions.BookNotFoundException;
 import com.BibleQuote.bqtj.exceptions.OpenModuleException;

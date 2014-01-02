@@ -22,7 +22,7 @@ import com.BibleQuote.bqtj.utils.Log;
 import android.view.View;
 import android.widget.*;
 import com.BibleQuote.BibleQuoteAndroid.exceptions.ExceptionHelper;
-import com.BibleQuote.R;
+import com.BibleQuote.BibleQuoteAndroid.R;
 import com.BibleQuote.BibleQuoteAndroid.BibleQuoteApp;
 import com.BibleQuote.BibleQuoteAndroid.async.AsyncManager;
 import com.BibleQuote.BibleQuoteAndroid.async.AsyncOpenModule;

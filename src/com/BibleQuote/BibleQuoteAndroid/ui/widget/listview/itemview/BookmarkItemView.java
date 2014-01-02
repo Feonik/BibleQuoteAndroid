@@ -22,7 +22,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.BibleQuote.BibleQuoteAndroid.ui.widget.listview.item.BookmarkItem;
 import com.BibleQuote.BibleQuoteAndroid.ui.widget.listview.item.Item;
-import com.BibleQuote.R;
+import com.BibleQuote.BibleQuoteAndroid.R;
 
 public class BookmarkItemView extends LinearLayout implements ItemView {
 

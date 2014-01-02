@@ -25,7 +25,7 @@ import android.widget.Toast;
 import com.BibleQuote.BibleQuoteAndroid.ui.ReaderActivity;
 import com.BibleQuote.BibleQuoteAndroid.ui.widget.PlayerView;
 import com.BibleQuote.BibleQuoteAndroid.ui.widget.ReaderWebView;
-import com.BibleQuote.R;
+import com.BibleQuote.BibleQuoteAndroid.R;
 import com.BibleQuote.bqtj.managers.Librarian;
 import com.BibleQuote.bqtj.android.tts.controllers.TTSPlayerController;
 import com.actionbarsherlock.app.SherlockFragment;

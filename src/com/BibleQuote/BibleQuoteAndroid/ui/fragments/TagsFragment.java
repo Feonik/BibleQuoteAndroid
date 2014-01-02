@@ -22,7 +22,7 @@ import android.view.View;
 import android.widget.ListView;
 import com.BibleQuote.BibleQuoteAndroid.ui.widget.listview.ItemAdapter;
 import com.BibleQuote.BibleQuoteAndroid.ui.widget.listview.item.Item;
-import com.BibleQuote.R;
+import com.BibleQuote.BibleQuoteAndroid.R;
 import com.BibleQuote.BibleQuoteAndroid.BibleQuoteApp;
 import com.BibleQuote.bqtj.managers.Librarian;
 import com.BibleQuote.bqtj.managers.bookmarks.Bookmark;
