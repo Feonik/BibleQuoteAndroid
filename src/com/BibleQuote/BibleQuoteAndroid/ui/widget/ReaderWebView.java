@@ -44,12 +44,15 @@ public class ReaderWebView extends WebView
 	private GestureDetector mGestureScanner;
 	private JavaScriptInterface jsInterface;
 
+	// !!!
 	protected TreeSet<Integer> selectedVerse = new TreeSet<Integer>();
 
+	// !!!
 	public TreeSet<Integer> getSelectedVerses() {
 		return this.selectedVerse;
 	}
 
+	// !!!
 	public void setSelectedVerse(TreeSet<Integer> selectedVerse) {
 		jsInterface.clearSelectedVerse();
 		this.selectedVerse = selectedVerse;
@@ -58,10 +61,12 @@ public class ReaderWebView extends WebView
 		}
 	}
 
+	// !!!
 	public void gotoVerse(int verse) {
 		jsInterface.gotoVerse(verse);
 	}
 
+	// !!!
 	public void versesEditor() {
 		for (Integer verse : selectedVerse) {
 			jsInterface.verseEditor(verse);
@@ -69,12 +74,15 @@ public class ReaderWebView extends WebView
 		selectedVerse.clear();
 	}
 
+	// !!!
 	private boolean isChapterChanged = false;
 
+	// !!!
 	public boolean isChapterChanged() {
 		return isChapterChanged;
 	}
 
+	// !!!
 	public void resetFixedVerses() {
 		isChapterChanged = false;
 	}
@@ -98,8 +106,10 @@ public class ReaderWebView extends WebView
 	}
 
 
+	// !!!
 	protected Librarian myLibrarian;
 
+	// !!!
 	public void setLibrarian(Librarian librarian) {
 		myLibrarian = librarian;
 	}
@@ -120,15 +130,18 @@ public class ReaderWebView extends WebView
 
 	public boolean mPageLoaded = false;
 
+	// !!!
 	public ReaderWebView(Context context, AttributeSet attributeSet) {
 		super(context, attributeSet);
 
+		// !!!
 		WebSettings settings = getSettings();
 		settings.setJavaScriptEnabled(true);
 		settings.setNeedInitialFocus(false);
 		settings.setBuiltInZoomControls(false);
 		settings.setSupportZoom(false);
 
+		// !!!
 		setFocusable(true);
 		setFocusableInTouchMode(true);
 		setWebViewClient(new webClient());
@@ -138,6 +151,7 @@ public class ReaderWebView extends WebView
 		// http://code.google.com/p/android/issues/detail?id=7189
 		// Issue 7189: 	WebView with input/textarea never get virtual keyboard focus
 		setHapticFeedbackEnabled(true);
+		// !!!
 		setClickable(true);
 		requestFocus(View.FOCUS_DOWN);
 		//settings.setUseWideViewPort(true); //-- делает слишком широкой <textarea>
@@ -158,9 +172,11 @@ public class ReaderWebView extends WebView
 		});
 		// -->
 
+		// !!!
 		this.jsInterface = new JavaScriptInterface();
 		addJavascriptInterface(this.jsInterface, "reader");
 
+		// !!!
 		setVerticalScrollbarOverlay(true);
 
 		mGestureScanner = new GestureDetector(context, this);
@@ -168,6 +184,7 @@ public class ReaderWebView extends WebView
 		mGestureScanner.setOnDoubleTapListener(this);
 	}
 
+	// !!!
 	public void setText(String baseUrl, String text, int currVerse, Boolean nightMode, Boolean isBible) {
 		mPageLoaded = false;
 		String modStyle = isBible ? "bible_style.css" : "book_style.css";
@@ -198,82 +215,84 @@ public class ReaderWebView extends WebView
 		return (scrollPos >= (computeVerticalScrollRange() - 10));
 	}
 
-    private int mUpdateMode = 34;
+	private int mUpdateMode = 34;
 
-    /*
-    *  Переключение режима отображения екрана для
-    *  Sony PRS-T2/T1
-    *  Взято из NoRefreshEnabler (http://www.mobileread.com/forums/showpost.php?p=1956700&postcount=33)
-    *  mUpdateMode = 34  -- нормальный режим, 16 оттенков серого
-    *  mUpdateMode = 5   -- чернобелый режим, 2 цвета
-    * */
-    @Override
-    public void invalidate() {
-        //super.invalidate(mUpdateMode);
-        if (DeviceInfo.isEInkSonyPRST()) {
-            try {
-                Method invalidateMethod = super.getClass().getMethod("invalidate", int.class);
-                invalidateMethod.invoke(this, mUpdateMode);
+	/*
+	 *  Переключение режима отображения екрана для
+	 *  Sony PRS-T2/T1
+	 *  Взято из NoRefreshEnabler (http://www.mobileread.com/forums/showpost.php?p=1956700&postcount=33)
+	 *  mUpdateMode = 34  -- нормальный режим, 16 оттенков серого
+	 *  mUpdateMode = 5   -- чернобелый режим, 2 цвета
+	 * */
+	@Override
+	public void invalidate() {
+		//super.invalidate(mUpdateMode);
+		if (DeviceInfo.isEInkSonyPRST()) {
+			try {
+				Method invalidateMethod = super.getClass().getMethod("invalidate", int.class);
+				invalidateMethod.invoke(this, mUpdateMode);
 
-                View vRootV = getRootView();
-                if (vRootV != this) {
-                    vRootV.invalidate();
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        } else {
-            super.invalidate();
-        }
-    }
+				View vRootV = getRootView();
+				if (vRootV != this) {
+					vRootV.invalidate();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else {
+			super.invalidate();
+		}
+	}
 
-    private long lKeyDownTime = 0;
+	private long lKeyDownTime = 0;
 
-    /*
-    * При нажатии на кнопку переключаем на NoRefresh
-    * */
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (DeviceInfo.isEInkSonyPRST()) {
-            mUpdateMode = 5;
-            invalidate();
-            lKeyDownTime = System.currentTimeMillis();
-        }
-        return false;
-    }
+	/*
+	 * При нажатии на кнопку переключаем на NoRefresh
+	 * */
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (DeviceInfo.isEInkSonyPRST()) {
+			mUpdateMode = 5;
+			invalidate();
+			lKeyDownTime = System.currentTimeMillis();
+		}
+		return false;
+	}
 
-    final static int iKeyTimeDelay = 2000;
-    /*
-    * При отпускании кнопки возвращаем режим Refresh,
-    * если только снова не нажали кнопку за время меньше задержки.
-    * */
-    @Override
-    public boolean onKeyUp(int keyCode, KeyEvent event) {
+	final static int iKeyTimeDelay = 2000;
 
-        if (DeviceInfo.isEInkSonyPRST()) {
+	/*
+	 * При отпускании кнопки возвращаем режим Refresh,
+	 * если только снова не нажали кнопку за время меньше задержки.
+	 * */
+	@Override
+	public boolean onKeyUp(int keyCode, KeyEvent event) {
 
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                public void run() {
+		if (DeviceInfo.isEInkSonyPRST()) {
 
-                    if ((System.currentTimeMillis() - lKeyDownTime) > iKeyTimeDelay) {
-                        mUpdateMode = 34;
-                        invalidate();
-                    }
-                }
-            }, iKeyTimeDelay);
-        }
+			Handler handler = new Handler();
+			handler.postDelayed(new Runnable() {
+				public void run() {
 
-        return false;
-    }
+					if ((System.currentTimeMillis() - lKeyDownTime) > iKeyTimeDelay) {
+						mUpdateMode = 34;
+						invalidate();
+					}
+				}
+			}, iKeyTimeDelay);
+		}
 
-    public void computeScroll() {
+		return false;
+	}
+
+	public void computeScroll() {
 		super.computeScroll();
 		if (mPageLoaded && isScrollToBottom()) {
 			notifyListeners(ChangeCode.onScroll);
 		}
 	}
 
+	// !!!
 	public void clearSelectedVerse() {
 		if (selectedVerse.size() == 0) {
 			return;
@@ -284,6 +303,7 @@ public class ReaderWebView extends WebView
 		}
 	}
 
+	// !!!
 	private String getStyle(Boolean nightMode) {
 		String textColor;
 		String backColor;
@@ -335,6 +355,7 @@ public class ReaderWebView extends WebView
 		return style.toString();
 	}
 
+	// !!!
 	final class webClient extends WebViewClient {
 		webClient() {
 		}
@@ -356,21 +377,21 @@ public class ReaderWebView extends WebView
 	}
 */
 
-    /*
-    * Детектируем отпускание экрана
-    * */
-    public boolean onTouchEvent(MotionEvent event) {
-        if (DeviceInfo.isEInkSonyPRST()) {
-            boolean detectedUp = (event.getAction() == MotionEvent.ACTION_UP);
-            boolean isUp = false;
-            if (!mGestureScanner.onTouchEvent(event) && detectedUp) {
-                isUp = onUp(event);
-            }
-            return isUp || (event != null && super.onTouchEvent(event));
-        } else {
-            return mGestureScanner.onTouchEvent(event) || (event != null && super.onTouchEvent(event));
-        }
-    }
+	/*
+	 * Детектируем отпускание экрана
+	 * */
+	public boolean onTouchEvent(MotionEvent event) {
+		if (DeviceInfo.isEInkSonyPRST()) {
+			boolean detectedUp = (event.getAction() == MotionEvent.ACTION_UP);
+			boolean isUp = false;
+			if (!mGestureScanner.onTouchEvent(event) && detectedUp) {
+				isUp = onUp(event);
+			}
+			return isUp || (event != null && super.onTouchEvent(event));
+		} else {
+			return mGestureScanner.onTouchEvent(event) || (event != null && super.onTouchEvent(event));
+		}
+	}
 
 	public boolean onSingleTapUp(MotionEvent event) {
 		return false;
@@ -412,44 +433,44 @@ public class ReaderWebView extends WebView
 		return false;
 	}
 
-    private long lDownTime = 0;
+	private long lDownTime = 0;
 
-    /*
-    * При нажатии на кнопку переключаем на NoRefresh
-    * */
-    public boolean onDown(MotionEvent event) {
-        if (DeviceInfo.isEInkSonyPRST()) {
-            mUpdateMode = 5;
-            invalidate();
-            lDownTime = System.currentTimeMillis();
-        }
+	/*
+	 * При нажатии на кнопку переключаем на NoRefresh
+	 * */
+	public boolean onDown(MotionEvent event) {
+		if (DeviceInfo.isEInkSonyPRST()) {
+			mUpdateMode = 5;
+			invalidate();
+			lDownTime = System.currentTimeMillis();
+		}
 		return false;
 	}
 
-    final static int iTimeDelay = 2000;
+	final static int iTimeDelay = 2000;
 
-    /*
-    * При отпускании экрана возвращаем режим Refresh,
-    * если только снова не коснулись экрана за время меньше задержки.
-    * */
-    public boolean onUp(MotionEvent event) {
+	/*
+	 * При отпускании экрана возвращаем режим Refresh,
+	 * если только снова не коснулись экрана за время меньше задержки.
+	 * */
+	public boolean onUp(MotionEvent event) {
 
-        if (DeviceInfo.isEInkSonyPRST()) {
+		if (DeviceInfo.isEInkSonyPRST()) {
 
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                public void run() {
+			Handler handler = new Handler();
+			handler.postDelayed(new Runnable() {
+				public void run() {
 
-                    if ((System.currentTimeMillis() - lDownTime) > iTimeDelay) {
-                        mUpdateMode = 34;
-                        invalidate();
-                    }
-                }
-            }, iTimeDelay);
-        }
+					if ((System.currentTimeMillis() - lDownTime) > iTimeDelay) {
+						mUpdateMode = 34;
+						invalidate();
+					}
+				}
+			}, iTimeDelay);
+		}
 
-        return false;
-    }
+		return false;
+	}
 
 	public boolean onFling(MotionEvent e1, MotionEvent e2,
 						   float velocityX, float velocityY) {
@@ -523,30 +544,31 @@ public class ReaderWebView extends WebView
 		return false;
 	}
 
-    /*
-    * При касании экрана режим был переключен на NoRefresh,
-    * если после было событие onLongPress, то активность уже потеряла управление --
-    * перерисовываем экран при появлении активности.
-    * (Оказалось очень удобно в режиме чтения -- при выборе книг/глав из списка
-    * включен режим NoRefresh, соответственно быстро работает скролл
-    * и переключение по книгам/главам.)
-    * */
-    protected void onWindowVisibilityChanged(int visibility) {
-        if (DeviceInfo.isEInkSonyPRST()) {
-            if (visibility == View.VISIBLE) {
+	/*
+	 * При касании экрана режим был переключен на NoRefresh,
+	 * если после было событие onLongPress, то активность уже потеряла управление --
+	 * перерисовываем экран при появлении активности.
+	 * (Оказалось очень удобно в режиме чтения -- при выборе книг/глав из списка
+	 * включен режим NoRefresh, соответственно быстро работает скролл
+	 * и переключение по книгам/главам.)
+	 * */
+	protected void onWindowVisibilityChanged(int visibility) {
+		if (DeviceInfo.isEInkSonyPRST()) {
+			if (visibility == View.VISIBLE) {
 
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    public void run() {
-                        mUpdateMode = 34;
-                        invalidate();
-                    }
-                }, 1000);
+				Handler handler = new Handler();
+				handler.postDelayed(new Runnable() {
+					public void run() {
+						mUpdateMode = 34;
+						invalidate();
+					}
+				}, 1000);
 
-            }
-        }
-    }
+			}
+		}
+	}
 
+	// !!!
 	final class chromeClient extends WebChromeClient {
 		chromeClient() {
 		}
@@ -561,12 +583,14 @@ public class ReaderWebView extends WebView
 
 	public String sWortForDict = "";
 
+	// !!!
 	final class JavaScriptInterface {
 
 		public JavaScriptInterface() {
 			clearSelectedVerse();
 		}
 
+		// !!!
 		public void clearSelectedVerse() {
 			for (final Integer verse : selectedVerse) {
 
@@ -581,6 +605,7 @@ public class ReaderWebView extends WebView
 			selectedVerse.clear();
 		}
 
+		// !!!
 		public void onClickVerse(String id) {
 			if (currMode != Mode.Study || !id.contains("verse")) {
 				return;
@@ -620,6 +645,7 @@ public class ReaderWebView extends WebView
 			}
 		}
 
+		// !!!
 		private void setSelectedVerse(final int verse) {
 
 			post(new Runnable() {
@@ -631,6 +657,7 @@ public class ReaderWebView extends WebView
 
 		}
 
+		// !!!
 		public void gotoVerse(final int verse) {
 
 			post(new Runnable() {
@@ -646,6 +673,7 @@ public class ReaderWebView extends WebView
 			Log.i(TAG, "JavaScriptInterface.alert()");
 		}
 
+		// !!!
 		public void verseEditor(final int iVerseNumber) {
 
 			if (selectedVerse.contains(iVerseNumber)) {
@@ -682,6 +710,7 @@ public class ReaderWebView extends WebView
 			}
 		}
 
+		// !!!
 		public void fixVerse(final String sVerseNum, String sVerseText) {
 			Integer iVerseNumber = Integer.parseInt(sVerseNum);
 
@@ -705,6 +734,7 @@ public class ReaderWebView extends WebView
 
 		}
 
+		// !!!
 		public void cancelEdit(final String sVerseNum) {
 			Integer iVerseNumber = Integer.parseInt(sVerseNum);
 
