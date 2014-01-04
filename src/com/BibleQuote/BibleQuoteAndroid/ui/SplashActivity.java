@@ -44,7 +44,7 @@ public class SplashActivity extends SherlockActivity implements OnTaskCompleteLi
 		setContentView(R.layout.main);
 
 
-		Log.Init(new LogSysAndroid());
+		Log.Init(LogSysAndroid.getLogSysAndroid());
 
 		BibleQuoteApp app = (BibleQuoteApp) getApplication();
 
