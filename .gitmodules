@@ -1,0 +1,24 @@
+[submodule "ActionBarSherlock-4.2.0"]
+	path = modules/ActionBarSherlock-4.2.0
+	url = https://github.com/NikitaFeodonit/ActionBarSherlock-4.2.0.git
+[submodule "backport-util-concurrent-Java50-3.1-src"]
+	path = modules/backport-util-concurrent-Java50-3.1-src
+	url = https://github.com/NikitaFeodonit/backport-util-concurrent-Java50-3.1-src.git
+[submodule "bqtj"]
+	path = modules/bqtj
+	url = https://github.com/NikitaFeodonit/bqtj.git
+[submodule "bqtj-android"]
+	path = modules/bqtj-android
+	url = https://github.com/NikitaFeodonit/bqtj-android.git
+[submodule "hsqldb-2.3.1"]
+	path = modules/hsqldb-2.3.1
+	url = https://github.com/NikitaFeodonit/hsqldb-2.3.1.git
+[submodule "ormlite-core-4.48-sources"]
+	path = modules/ormlite-core-4.48-sources
+	url = https://github.com/NikitaFeodonit/ormlite-core-4.48-sources.git
+[submodule "ormlite-jdbc-4.48-sources"]
+	path = modules/ormlite-jdbc-4.48-sources
+	url = https://github.com/NikitaFeodonit/ormlite-jdbc-4.48-sources.git
+[submodule "xmlpull_1_0_5"]
+	path = modules/xmlpull_1_0_5
+	url = https://github.com/NikitaFeodonit/xmlpull_1_0_5.git
